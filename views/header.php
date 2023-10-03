@@ -30,15 +30,19 @@
                 }
 
                 if (!(isset($_SESSION["Connected"])) || ($_SESSION["Connected"] === true)){
-                    echo ' <a class="link" href="upload">Déposer un fichier</a>';
+                    echo '<a class="link" href="upload">Déposer un fichier</a>';
                 }
 
                 if (!(isset($_SESSION["Connected"])) || ($_SESSION["Connected"] === true)){
-                    echo ' <a class="link" href="account"> Compte</a>';
+                    echo '<a class="link" href="activite">Activité</a>';
                 }
 
                 if (!(isset($_SESSION["Connected"])) || ($_SESSION["Connected"] === true)){
-                    echo '<a class="link" href="disconnect">    Déconnexion</a>';
+                    echo '<a class="link" href="account">Compte</a>';
+                }
+
+                if (!(isset($_SESSION["Connected"])) || ($_SESSION["Connected"] === true)){
+                    echo '<a class="link" href="disconnect">Déconnexion</a>';
                 }
                 
             ?>

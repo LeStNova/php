@@ -17,9 +17,7 @@ ApplicationController::getInstance()->addRoute('disconnect', CONTROLLERS_DIR.'/d
 ApplicationController::getInstance()->addRoute('upload', CONTROLLERS_DIR.'/upload.php');
 ApplicationController::getInstance()->addRoute('index', CONTROLLERS_DIR.'/main.php');
 ApplicationController::getInstance()->addRoute('account', CONTROLLERS_DIR.'/account.php');
-
-
-ApplicationController::getInstance()->addRoute('test', CONTROLLERS_DIR.'/test.php');
+ApplicationController::getInstance()->addRoute('activite', CONTROLLERS_DIR.'/activite.php');
 
 
 // Process the request

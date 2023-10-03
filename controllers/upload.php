@@ -32,10 +32,10 @@ class UploadActivityController extends Controller {
                 if (sizeof($activiteDAO->maxId()) == 0) {
                     $actiIdMax = 1;
                 } else {
-                    $actiIdMax = $activiteDAO->maxId()[0];
+                    $actiIdMax = $activiteDAO->maxId()[0]->getIdActi() + 1;
                 }
                 
-                $acti->init(($actiIdMax->getIdActi() + 1), 'malo@gmail.com', $obj['activity']['date'], $obj['activity']['description']);
+                $acti->init(($actiIdMax), 'malo@gmail.com', $obj['activity']['date'], $obj['activity']['description']);
                 $activiteDAO->insert($acti);
 
             } catch (PDOException $e) {
@@ -47,8 +47,7 @@ class UploadActivityController extends Controller {
             $this->render('upload_activity_form', ['Fichier bien enregisté']);
 
         } else {
-            $this->render('upload_activity_form', []);
-            echo "File upload error for file : " . $_FILES["activity"]["error"];
+            $this->render('upload_activity_form', ['Choisissez un fichier .json']);
         }
 
     }
