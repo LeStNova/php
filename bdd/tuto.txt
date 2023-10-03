@@ -1,0 +1,2 @@
+sqlite3 sport_track.db
+sqlite3 sport_track.db < create_db.sql
